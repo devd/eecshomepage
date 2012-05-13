@@ -1,0 +1,129 @@
+---
+PAPERS:
+- TITLE: "Privilege Separation for HTML5 Applications"
+  AUTHORS:
+  - NAME: Devdatta Akhawe
+  - NAME: Prateek Saxena
+    HOMEPAGE: "http://www.cs.berkeley.edu/~prateeks"
+  - NAME: Dawn Song
+    HOMEPAGE: "http://www.cs.berkeley.edu/~dawnsong"
+
+  VENUE: 21st Usenix Security Symposium
+  LOCATION: Bellevue 2012
+  ABSTRACT: "Privilege separation is a powerful concept which has shaped the design of numerous user-level OS applications. However, achieving similar privilege separation in web applications has been much harder. The standard approach for privilege separation in web applications is to execute application components in different web origins which are isolated by the same origin policy. However, creating web origins comes at a financial and administrative cost and, in practice, limits the number of web origins that an application can utilize. We point out this `scarcity of web origins' is the central reason that makes privilege separation hard---in the current design, the number of web origins needed grows directly in proportion to the number of application components. <br>
+In this paper, we propose a new design for achieving effective privilege separation in HTML5 applications that shows how applications can cheaply create arbitrary number of components and side-step the problem of scarce web origins. Our approach utilizes standardized, but less known, abstractions already implemented in modern browsers. We do not advocate any changes to the underlying browser or require learning new high-level languages, which contrasts prior approaches. We empirically show that we can retrofit our design to real-world HTML5 applications (browser extensions and rich client-side applications) and achieve reduction of 6x to 10000x in TCB for our case studies. Our mechanism requires less than 13 lines of application-specific code changes and considerably improves auditability."
+  
+- TITLE: "Product Labels for Mobile Application Markets"
+  PDF: "mobile-metrics.pdf"
+  AUTHORS:
+  - NAME: Devdatta Akhawe
+  - HOMEPAGE: "http://www.cs.berkeley.edu/~finifter/"
+    NAME: Matthew Finifter
+
+  VENUE: Mobile Security Technologies
+  LOCATION: San Francisco 2012
+  ABSTRACT: "Mobile application markets thrive, yet they are heldback 
+    from their full potential by the information asymmetrybetween application
+    developers and application consumers. AConsumer has no way to gauge
+    the security or reliability of anapplication, and a developer has
+    no way to differentiate hisapplication from that of the competition
+    on the basis of thesefactors. We argue that the centralized nature
+    of mobileapplication markets, such as Android Market and the iOS
+    App Store,afford them a unique opportunity to gather and present
+    information. We discuss a number of ideas to leverage thisopportunity
+    to eliminate information asymmetry, includingthirdparty certifications,
+    qualitative descriptions of attacksurface, and aggregated usage
+    data."
+ 
+
+- TITLE: "A Systematic Analysis of XSS Sanitization in Web Application Frameworks"
+  PDF: "http://www.cs.berkeley.edu/~jww/papers/2011/weinberger-saxena-akhawe-etc.pdf"
+  SLIDES: "http://www.cs.berkeley.edu/~jww/files/2011/weinberger-saxena-akhawe-etc%20presentation.pptx"
+  AUTHORS:
+  - NAME: Joel Weinberger
+    HOMEPAGE: "http://www.cs.berkeley.edu/~jww/"
+  - NAME: Prateek Saxena
+    HOMEPAGE: "http://www.cs.berkeley.edu/~prateeks"
+  - NAME: Devdatta Akhawe
+  - NAME: Matthew Finifter
+    HOMEPAGE: "http://www.cs.berkeley.edu/~finifter/"
+  - NAME: Dawn Song
+    HOMEPAGE: "http://www.cs.berkeley.edu/~dawnsong"
+
+  VENUE: 16th European Symposium on Research in Computer Security (ESORICS)
+  LOCATION: Leuven 2011
+  ABSTRACT: "While most research on XSS defense has focused on techniques for securing existing applications and re-architecting browser mechanisms, sanitization remains the industry-standard defense mechanism. By streamlining and automating XSS sanitization, web application frameworks stand in a good position to stop XSS but have received little research attention. In order to drive research on web frameworks, we systematically study the security of the XSS sanitization abstractions frameworks provide. We develop a novel model of the web browser and characterize the challenges of XSS sanitization. Based on the model, we systematically evaluate the XSS abstractions in 14 major commercially-used web frameworks. We find that frameworks often do not address critical parts of the XSS conundrum. We perform an empirical analysis of 8 large web applications to extract the requirements of sanitization primitives from the perspective of real-world applications. Our study shows that there is a wide gap between the abstractions provided by frameworks and the requirements of applications."
+  
+
+- TITLE: "Do You Know Where Your Data Are? <br> Secure Data Capsules for Deployable Data Protection"
+  PDF: "papers/hotos-2011.pdf"
+  SLIDES: "http://static.usenix.org/events/hotos11/tech/slides/maniatis.pdf"
+  AUTHORS:
+  - NAME: Petros Maniatis
+    HOMEPAGE: "http://berkeley.intel-research.net/maniatis/"
+  - NAME: Devdatta Akhawe
+  - NAME: Kevin Fall
+    HOMEPAGE: "http://kfall.net/ucbpage/"
+  - NAME: Elaine Shi
+    HOMEPAGE: "http://www.eecs.berkeley.edu/~elaines/"
+  - NAME: Stephen McCamant
+    HOMEPAGE: "http://www.cs.berkeley.edu/~smcc/"
+  - NAME: Dawn Song
+    HOMEPAGE: "http://www.cs.berkeley.edu/~dawnsong"
+
+  VENUE: 13th Workshop on Hot Topics in Operating Systems (HotOS)
+  LOCATION: Napa 2011
+
+- TITLE: "Towards a Formal Foundation of Web Security"
+  PDF: "papers/websec-csf10.pdf"
+  SLIDES: "https://cid-550f80e1556ec4fc.office.live.com/fullscreen?resid=550F80E1556EC4FC!118&filename=csftalk_19Jul_final.pptx&wx=p&wa=p&wv=s&wc=officeapps.live.com&wy=y&wp=y"
+  AUTHORS:
+  - NAME: Devdatta Akhawe
+  - NAME: Adam Barth
+    HOMEPAGE: "http://www.adambarth.com"
+  - NAME: Peifung Eric Lam
+    HOMEPAGE: "http://www.peifung.com/pflam/Home.html"
+  - NAME: John Mitchell
+    HOMEPAGE: "http://cs.stanford.edu/people/jcm/"
+  - NAME: Dawn Song
+    HOMEPAGE: "http://www.cs.berkeley.edu/~dawnsong"
+
+  VENUE: 23rd IEEE Computer Security Foundations Symposium (CSF)
+  LOCATION: Edinburgh 2010
+  ABSTRACT: "We propose a formal model of web security based on an abstraction of the web platform and use this model to analyze the security of several sample web mechanisms and applications. We identify multiple distinct threat models that can be used to analyze web applications, ranging from a web attacker who controls malicious web sites and clients, to stronger attackers who can control the network and/or leverage sites designed to display user-supplied content. We propose two broadly applicable security goals and study five security mechanisms. In our case studies, which include HTML5 forms, Referer validation, and a single sign-on solution, we use a SAT-based model-checking tool to fid two previously known vulnerabilities and three new vulnerabilities. The case study of a Kerberos-based single sign-on system illustrates key differences between network protocols and web protocols and finds a vulnerability that arises because of the way cookies, redirects, and embedded links are used."
+
+- TITLE: "A Symbolic Execution Framework for JavaScript"
+  PDF: "http://webblaze.cs.berkeley.edu/2010/kudzu/kudzu.pdf"
+  SLIDES: "http://www.cs.berkeley.edu/~prateeks/papers/kudzu.ppt"
+  AUTHORS:
+  - NAME: Prateek Saxena
+    HOMEPAGE: "http://www.cs.berkeley.edu/~prateeks"
+  - NAME: Devdatta Akhawe
+  - NAME: Steve Hanna
+    HOMEPAGE: "http://www.vividmachines.com"
+  - NAME: Stephen McCamant
+    HOMEPAGE: "http://www.cs.berkeley.edu/~smcc/"
+  - NAME: Feng Mao
+  - NAME: Dawn Song
+    HOMEPAGE: "http://www.cs.berkeley.edu/~dawnsong"
+  VENUE: "31st IEEE Symposium on Security and Privacy"
+  LOCATION: Oakland 2010
+  SPECIALNOTE: "<b>Winner</b> of AT&T Best Applied Security Research Paper award at CSAW"
+  ABSTRACT: "As AJAX applications gain popularity, client-side JavaScript code is becoming increasingly complex. However, few automated vulnerability analysis tools for JavaScript exist. In this paper, we describe the first system for exploring the execution space of JavaScript code using symbolic execution. To handle JavaScript code’s complex use of string operations, we design a new language of string constraints and implement a solver for it. We build an automatic end-to-end tool, Kudzu, and apply it to the problem of finding client-side code injection vulnerabilities. In experiments on 18 live web applications, Kudzu automatically discovers 2 previously unknown vulnerabilities and 9 more than that were previously found only with a manually-constructed test suite."
+
+- TITLE: "The Emperor’s New API: On the (In)Secure Usage of New Client Side Primitives"
+  PDF: papers/w2sp10-primitives.pdf
+  SLIDES: w2spena.ppt
+  AUTHORS:
+  - NAME: Steve Hanna
+    HOMEPAGE: "http://www.vividmachines.com"
+  - NAME: Richard Shin
+  - NAME: Devdatta Akhawe
+  - NAME: Prateek Saxena
+    HOMEPAGE: "http://www.cs.berkeley.edu/~prateeks"
+  - NAME: Arman Boehm
+  - NAME: Dawn Song
+    HOMEPAGE: "http://www.cs.berkeley.edu/~dawnsong"
+  VENUE: "4th Web 2.0 Security and Privacy Workshop"
+  LOCATION: Oakland 2010
+  ABSTRACT: "Several new browser primitives have been proposed to meet the demands of application interactivity while enabling security. To investigate whether applications consistently use these primitives safely and adequately in practice, we study the real-world usage of two client-side primitives, namely postMessage and HTML5’s client-side database storage. We examine new purely client-side communication protocols layered on postMessage (Facebook Connect, Google Friend Connect) and several real-world web applications (including Gmail, Buzz, Maps and others) which use client-side storage abstractions. We find that, in practice, these abstractions are widely used insecurely, which leads to severe vulnerabilities and can increase the attack surface for web applications in unexpected ways. We conclude the paper by offering insights into why these abstractions can be hard to use safely, and propose the economy of liabilities principle for designing future abstractions. The principle recommends that a good design for a primitive should minimize the liability that the user undertakes to ensure application security. We suggest enhancements to the existing browser primitives to make their secure use more practical."

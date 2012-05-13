@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE-9" />
+	<title>Devdatta Akhawe</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+	<link href="images/key.png" type="image/png" rel="icon"></link>
+</head>
+
+<body id="index">
+    <div id="page-wrap">
+	    <div id="nav-bar">
+	       <div class="support">
+	           <h4>Contact</h4>
+	           <ul>
+                   <li>725 Soda Hall</li>
+                   <li>evil@berkeley.edu</li>
+                   </ul>
+	       </div>
+	    </div>
+    
+	    <h1><a href="#pron" rel="prettyPhoto">devdatta akhawe</a> &nbsp;<span>beta</span></h1>
+	    <div id="main-content">
+		<div id="inside-content">
+    <h3>hi</h3>
+    <p>I am a <strike>first</strike> <strike>second</strike> *gulp* third year graduate student in <a href="http://www.eecs.berkeley.edu/">Computer Science</a> at <a href="http://www.berkeley.edu">UC Berkeley</a> interested in <a href="http://security.cs.berkeley.edu">security</a>. I am currently working with <a href="http://www.cs.berkeley.edu/~dawnsong">Dawn Song</a>'s group. 
+    
+    <p>In the past, I have interned at Microsoft (MSRC), Yahoo! Labs and Microsoft Research. I have a Bachelor's degree in Computer Science from <a href="http://www.bits-pilani.ac.in">BITS Pilani</a>. I can be <a href="http://github.com/devd">found</a> at <a href="http://www.linkedin.com/in/devdattaakhawe/">various</a> <a href="http://twitter.com/frgx">places</a> on the internet. In my spare time, I also volunteer at <a href="http://www.ashanet.org/berkeley">Asha for Education, Berkeley</a> where I am the webmaster and the steward for <a href="http://www.ashanet.org/berkeley/projects/guria">Guria</a>.
+    
+    I also have a very <a href="#pron" rel="prettyPhoto">hard to pronounce name.</a></p>
+
+    <h3>research</h3>
+    <p>
+    I am interested in security and reliability of software, particularly web applications. Most of my research till now has been on using lightweight formal methods to achieve these aims. 
+
+<dl>
+<TMPL_LOOP NAME=PAPERS>
+<dt>
+		<dt>
+		<TMPL_VAR NAME=TITLE>
+		<TMPL_IF NAME=PDF>
+			&nbsp;
+			<a href="<TMPL_VAR NAME=PDF>">pdf</a>
+		</TMPL_IF>
+		<TMPL_IF NAME=SLIDES>
+			&nbsp;
+			<a href="<TMPL_VAR NAME=SLIDES>">slides</a>
+		</TMPL_IF>
+</dt>
+		
+<dd class="jse">	
+	<TMPL_LOOP NAME=AUTHORS><TMPL_IF NAME=HOMEPAGE><a href="<TMPL_VAR NAME=HOMEPAGE>"><TMPL_VAR NAME=NAME></a><TMPL_ELSE><TMPL_VAR NAME=NAME></TMPL_IF><TMPL_IF NAME="__last__"><TMPL_ELSE>,</TMPL_IF>	</TMPL_LOOP>
+
+  <br><em><TMPL_VAR NAME=VENUE></em>, <TMPL_VAR NAME=LOCATION>.
+  <TMPL_IF NAME=SPECIALNOTE><br><TMPL_VAR NAME=SPECIALNOTE></TMPL_IF>
+  <TMPL_IF NAME=ABSTRACT>
+  <div class='papermetadata'> 
+    <span>&#x227B; Abstract</span> 
+    <div class='abstract'>
+	<TMPL_VAR NAME=ABSTRACT>
+	</div>
+    </div>
+   </TMPL_IF>
+</dd>
+</TMPL_LOOP>
+</dl>
+
+  <h3>etc</h3>
+  <p>I have been hacking over a <a href="https://github.com/devd/Academic-Writing-Check">simple tool</a> to check for common errors in academic writing. If you use it, I would appreciate feedback/comments/patches.</p>
+  <p>I was czaring the <a href="http://security.cs.berkeley.edu/srg/" >Security Reading Group</a> at Berkeley. <a href="http://www.cs.berkeley.edu/~kevinchn/">Kevin</a> is now in charge.</p>
+  <p>The Web Security model project I worked on is now <a href="http://code.google.com/p/websecmodel/">opensource</a>.</p> 
+  <p><a href="http://webblaze.cs.berkeley.edu/2010/kaluza">Kaluza</a>, a tool I worked on, is now available to play with <a href="http://aerie.cs.berkeley.edu/kaluza/">online</a>. During this work, I also wrote a <a href="http://code.google.com/p/hampi/wiki/PCREToHampi">tool</a> to convert Perl compatible regular expressions to the <a href="http://people.csail.mit.edu/akiezun/hampi/">Hampi string solver</a> input format. It is now part of the <a href="http://code.google.com/p/hampi/">Hampi codebase</a>.</p>
+  </div></div>
+        
+        <div id="footer">
+          <!--[if IE]>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+          <script type="text/javascript" src="http://github.com/malsup/corner/raw/master/jquery.corner.js?v2.09"></script>
+          <script type="text/javascript">
+            $('#nav-bar').corner('18px');
+            $('#main-content').corner('18px');
+            $('.callout').corner('6px');
+          </script>
+          <![endif]-->
+		  
+	</div>
+	
+	</div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$('.papermetadata .abstract').each(function(){
+	    var absdiv=$(this);
+	    $(this).parent().children('span').first().each(function(){
+	    $(this).css("display","inline");
+	    $(this).wrap('<a href="#abstract"/>');
+        $(this).click(function(ev){
+          absdiv.slideToggle(200).toggleClass('showing');
+          if($(this).html()===unescape('%u2228%20Abstract')){
+          $(this).html('&#x227B; Abstract');
+          }else {
+          $(this).html('&#x2228; Abstract');
+          }
+          return false;
+	      
+	    });
+
+	    });
+		
+	  });
+	</script>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+      default_width:700,
+      default_height:500,
+  }
+);
+		});
+	</script>
+<div id="pron" style="display:none;">
+  <div style="margin-left:20px;margin-right:20px">
+  <h3> How to pronounce ``Devdatta Akhawe'' ?</h3>
+
+  <p> I have often noticed people struggle to pronounce my name. The correct way to pronounce my name is:</p>
+  <blockquote>
+  <strong>IPA</strong>: d̪eːʋdɐ̪t̪t̪̪ ākʰʋeː &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- d&#x032A;e&#x02D0;&#x028B;d&#x0250;&#x032A;t&#x032A;t&#x032A;&#x032A; &#x0101;k&#x02B0;&#x028B;e&#x02D0; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+  <strong>IAST</strong>: devadatta &#x0101;khav&#xE9;
+  </blockquote>  <br> 
+  <p><strong>IAST Explanation</strong> <br>
+
+Sanskrit derivative languages, like Marathi(my mother tongue), often have 
+an inherent light 'a' sound with every consonant. All the `a's above are the (very) 
+light ones, the &#x0101; is the heavy 'aa'. 
+ The `d's are also of the light variety---closer to `the' in English. 
+Similarly, the `t's are the light ones, closer to `<em>th</em>in' but without the 
+aspiration caused by the 'h'. Also note the `&#xE9;' at the end, similar to <em>caf&#xE9;</em></p>
+<p>
+  Don't feel bad if you can't pronounce it---as is obvious from above, most of the consonants used
+are absent from English. I myself find it very difficult to pronounce it correctly when I am
+speaking English, while the same task is trivial when I am speaking Marathi. You can just call me ``dev'' like most people---in which case I prefer the heavy ``d' (`<em>d</em>estroy') that is common in English. Just no <em>data</em> for the last part please! :) </p>
+<br><!--p>*Hindi is a notable exception to this rule.</p-->
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5474337-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+
