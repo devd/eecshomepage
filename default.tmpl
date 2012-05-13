@@ -56,7 +56,7 @@
   <TMPL_IF NAME=SPECIALNOTE><br><TMPL_VAR NAME=SPECIALNOTE></TMPL_IF>
   <TMPL_IF NAME=ABSTRACT>
   <div class='papermetadata'> 
-    <span>&#x227B; Abstract</span> 
+    <span>≻ Abstract</span> 
     <div class='abstract'>
 	<TMPL_VAR NAME=ABSTRACT>
 	</div>
@@ -66,7 +66,7 @@
 </TMPL_LOOP>
 </dl>
 
-  <h3>etc</h3>
+  <h3>etc</h3>jk
   <p>I have been hacking over a <a href="https://github.com/devd/Academic-Writing-Check">simple tool</a> to check for common errors in academic writing. If you use it, I would appreciate feedback/comments/patches.</p>
   <p>I was czaring the <a href="http://security.cs.berkeley.edu/srg/" >Security Reading Group</a> at Berkeley. <a href="http://www.cs.berkeley.edu/~kevinchn/">Kevin</a> is now in charge.</p>
   <p>The Web Security model project I worked on is now <a href="http://code.google.com/p/websecmodel/">opensource</a>.</p> 
@@ -96,10 +96,10 @@
 	    $(this).wrap('<a href="#abstract"/>');
         $(this).click(function(ev){
           absdiv.slideToggle(200).toggleClass('showing');
-          if($(this).html()===unescape('%u2228%20Abstract')){
-          $(this).html('&#x227B; Abstract');
+          if($(this).html()==='∨ Abstract'){
+          $(this).html('≻ Abstract');
           }else {
-          $(this).html('&#x2228; Abstract');
+          $(this).html('∨ Abstract');
           }
           return false;
 	      
@@ -128,16 +128,18 @@
   <blockquote>
   <strong>IPA</strong>: d̪eːʋdɐ̪t̪t̪̪ ākʰʋeː &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <!-- d&#x032A;e&#x02D0;&#x028B;d&#x0250;&#x032A;t&#x032A;t&#x032A;&#x032A; &#x0101;k&#x02B0;&#x028B;e&#x02D0; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-  <strong>IAST</strong>: devadatta &#x0101;khav&#xE9;
+  <strong>IAST</strong>: devadatta ākhavé
+
+<!--devadatta &#x0101;khav&#xE9;-->
   </blockquote>  <br> 
   <p><strong>IAST Explanation</strong> <br>
 
 Sanskrit derivative languages, like Marathi(my mother tongue), often have 
 an inherent light 'a' sound with every consonant. All the `a's above are the (very) 
-light ones, the &#x0101; is the heavy 'aa'. 
+light ones, the ā is the heavy 'aa'. 
  The `d's are also of the light variety---closer to `the' in English. 
 Similarly, the `t's are the light ones, closer to `<em>th</em>in' but without the 
-aspiration caused by the 'h'. Also note the `&#xE9;' at the end, similar to <em>caf&#xE9;</em></p>
+aspiration caused by the 'h'. Also note the `é' at the end, similar to <em>café</em></p>
 <p>
   Don't feel bad if you can't pronounce it---as is obvious from above, most of the consonants used
 are absent from English. I myself find it very difficult to pronounce it correctly when I am
