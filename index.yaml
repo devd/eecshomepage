@@ -10,11 +10,32 @@ PAPERS:
 
   VENUE: 21st Usenix Security Symposium
   LOCATION: Bellevue 2012
-  ABSTRACT: "Privilege separation is a powerful concept which has shaped the design of numerous user-level OS applications. However, achieving similar privilege separation in web applications has been much harder. The standard approach for privilege separation in web applications is to execute application components in different web origins which are isolated by the same origin policy. However, creating web origins comes at a financial and administrative cost and, in practice, limits the number of web origins that an application can utilize. We point out this `scarcity of web origins' is the central reason that makes privilege separation hard---in the current design, the number of web origins needed grows directly in proportion to the number of application components. <br>
-In this paper, we propose a new design for achieving effective privilege separation in HTML5 applications that shows how applications can cheaply create arbitrary number of components and side-step the problem of scarce web origins. Our approach utilizes standardized, but less known, abstractions already implemented in modern browsers. We do not advocate any changes to the underlying browser or require learning new high-level languages, which contrasts prior approaches. We empirically show that we can retrofit our design to real-world HTML5 applications (browser extensions and rich client-side applications) and achieve reduction of 6x to 10000x in TCB for our case studies. Our mechanism requires less than 13 lines of application-specific code changes and considerably improves auditability."
+  ABSTRACT: "Privilege separation is a powerful concept which has shaped the
+design of numerous user-level OS applications. However, achieving similar
+privilege separation in web applications has been much harder. The standard
+approach for privilege separation in web applications is to execute application
+components in different web origins which are isolated by the same origin
+policy. However, creating web origins comes at a financial and administrative
+cost and, in practice, limits the number of web origins that an application can
+utilize. We point out this `scarcity of web origins' is the central reason that
+makes privilege separation hard---in the current design, the number of web
+origins needed grows directly in proportion to the number of application
+components. <br> In this paper, we propose a new design for achieving effective
+privilege
+separation in HTML5 applications that shows how applications can cheaply create
+arbitrary number of components and side-step the problem of scarce web origins.
+Our approach utilizes standardized, but less known, abstractions already
+implemented in modern browsers. We do not advocate any changes to the
+underlying browser or require learning new high-level languages, which
+contrasts prior approaches. We empirically show that we can retrofit our design
+to real-world HTML5 applications (browser extensions and rich client-side
+applications) and achieve reduction of 6x to 10000x in TCB for our case
+studies. Our mechanism requires less than 13 lines of application-specific code
+changes and considerably improves auditability."
   
 - TITLE: "Product Labels for Mobile Application Markets"
   PDF: "mobile-metrics.pdf"
+  SLIDES: "http://sdrv.ms/K7jZpM"
   AUTHORS:
   - NAME: Devdatta Akhawe
   - HOMEPAGE: "http://www.cs.berkeley.edu/~finifter/"
