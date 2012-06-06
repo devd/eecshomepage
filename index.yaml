@@ -1,6 +1,7 @@
 ---
 PAPERS:
 - TITLE: "Privilege Separation for HTML5 Applications"
+  PDF: "LeastPrivileges.pdf"
   AUTHORS:
   - NAME: Devdatta Akhawe
   - NAME: Prateek Saxena
