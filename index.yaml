@@ -1,5 +1,25 @@
 ---
 PAPERS:
+- TITLE: "How to Ask for Permission"
+  AUTHORS:
+  - NAME: Adrienne Porter Felt
+  - NAME: Serge Egelman
+  - NAME: Matthew Finifter
+  - NAME: Devdatta Akhawe
+  - NAME: David Wagner
+  VENUE: Hot Topics in Security (HotSec)
+  LOCATION: Bellevue 2012
+  ABSTRACT: "Application platforms provide third-party applications with access
+  to hardware (e.g., GPS and cameras) and personal data. Many platforms use
+  permission systems to protect access to these resources. The nature of these
+  permission systems vary widely across platforms. Some platforms obtain user
+  consent as part of installation, while others display runtime consent
+  dialogs. We propose a set of guidelines to aid platform designers in
+  determining the most appropriate permission-granting mechanism for a given
+  permission. We apply our proposal to a smartphone platform. A preliminary
+  evaluation indicates that our model will reduce the number of warnings
+  presented to users, thereby reducing habituation effects."
+
 - TITLE: "Privilege Separation for HTML5 Applications"
   PDF: "LeastPrivileges.pdf"
   AUTHORS:
