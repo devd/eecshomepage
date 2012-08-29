@@ -2,6 +2,7 @@
 PAPERS:
 - TITLE: "How to Ask for Permission"
   PDF: "http://www.eecs.berkeley.edu/~afelt/howtoaskforpermission.pdf"
+  SLIDES: "https://www.usenix.org/sites/default/files/conference/protected-files/felt_hotsec12_slides.pdf"
   AUTHORS:
   - NAME: Adrienne Porter Felt
   - NAME: Serge Egelman
